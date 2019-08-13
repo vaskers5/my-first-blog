@@ -25,7 +25,11 @@ SECRET_KEY = '+xz76y)wnua0w5gj2csg=)fh@b*d-$b5om(s+8!ganp83gknq$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['127.0.0.1','localhost', 'vaskers5.pythonanywhere.com']
+=======
+ALLOWED_HOSTS = ['127.0.0.1','localhost, 'vaskers5.pythonanywhere.com']
+>>>>>>> 36f1f1862a5e61da102e9f5675a78802d1fb013e
 
 
 # Application definition
