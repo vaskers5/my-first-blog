@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import psycopg2
+conn = psycopg2.connect(dbname='mydjangoproject_db', user='vaskers5',
+                        password='syndromtoretro12',host='localhost')
+cursor = conn.cursor()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,11 +29,11 @@ SECRET_KEY = '+xz76y)wnua0w5gj2csg=)fh@b*d-$b5om(s+8!ganp83gknq$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['127.0.0.1','localhost', 'vaskers5.pythonanywhere.com']
-=======
-ALLOWED_HOSTS = ['127.0.0.1','localhost, 'vaskers5.pythonanywhere.com']
->>>>>>> 36f1f1862a5e61da102e9f5675a78802d1fb013e
+#<<<<<<< HEAD
+ALLOWED_HOSTS = ['127.0.0.1','localhost', 'vaskers5']
+#=======
+#ALLOWED_HOSTS = ['127.0.0.1','localhost, 'vaskers5.pythonanywhere.com']
+#>>>>>>> 36f1f1862a5e61da102e9f5675a78802d1fb013e
 
 
 # Application definition
@@ -80,13 +84,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mydjangoproject_db',
         'USER': 'vaskers5',
+        'PASSWORD' : 'syndromtoretro12', 
         'HOST': '127.0.0.1',
         'PORT':5432,
-     
+
     }
+    
 }
 
 
